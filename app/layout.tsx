@@ -1,22 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
+  metadataBase: new URL("https://my-portfolio-six-dun-65.vercel.app"),
   title: "Kristina Vogli | Portfolio",
   description: "Portfolio of Krista Vogli – Web Developer and Designer",
   icons: {
-    icon: "/favicon.png", // place favicon in public/
+    icon: "/favicon.ico",
   },
   openGraph: {
     title: "Krista Vogli | Portfolio",
@@ -25,7 +15,7 @@ export const metadata: Metadata = {
     siteName: "Krista Vogli | Portfolio",
     images: [
       {
-        url: "/og-image.jpeg", // optional social preview image
+        url: "/og-image.jpeg",
         width: 1200,
         height: 630,
       },
@@ -46,11 +36,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-900 text-white`}
-      >
-        {children}
-      </body>
+      <body className={`antialiased bg-gray-900 text-white`}>{children}</body>
     </html>
   );
 }
