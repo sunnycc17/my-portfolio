@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function WelcomeSection() {
   return (
     <section
@@ -24,23 +26,23 @@ export default function WelcomeSection() {
         className="relative flex flex-wrap justify-center gap-6 md:gap-10 pt-7 mt-12"
         data-aos="fade-up"
       >
-        <a
-          href="/pages/resume"
+        <Link
+          href="/resume"
           data-aos="zoom-in"
           data-aos-easing="ease-out-cubic"
           className="inline-block bg-linear-to-r from-purple-600 via-purple-700 to-purple-800 text-white px-10 md:px-14 py-3 md:py-4 rounded-2xl font-semibold tracking-wide transition-all duration-500 ease-in-out hover:from-purple-500 hover:via-purple-600 hover:to-purple-700 active:scale-95 cursor-pointer text-center shadow-[0_6px_0_#4b0082] hover:shadow-[0_4px_0_#4b0082] active:shadow-[0_0_0_#4b0082] active:translate-y-1.5 transform perspective-1000"
         >
           Resume
-        </a>
+        </Link>
 
-        <a
+        <Link
           href="#Projects"
           data-aos="zoom-in"
           data-aos-easing="ease-out-cubic"
           className="inline-block bg-linear-to-rfrom-purple-600 via-purple-700 to-purple-800 text-white px-10 md:px-14 py-3 md:py-4 rounded-2xl font-semibold tracking-wide transition-all duration-500 ease-in-out hover:from-purple-500 hover:via-purple-600 hover:to-purple-700 active:scale-95 cursor-pointer text-center shadow-[0_6px_0_#4b0082] hover:shadow-[0_4px_0_#4b0082] active:shadow-[0_0_0_#4b0082] active:translate-y-1.5 transform perspective-1000"
         >
           Projects
-        </a>
+        </Link>
       </div>
     </section>
   );
