@@ -10,6 +10,7 @@ export default function TypedText({ strings }) {
     if (!el.current) return;
 
     const typed = new Typed(el.current, {
+      strings: strings,
       typeSpeed: 35, // slightly slower for smoother typing
       backSpeed: 20, // slower deletion
       backDelay: 2000, // longer pause before deleting

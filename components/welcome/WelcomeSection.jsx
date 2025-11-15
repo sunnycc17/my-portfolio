@@ -15,13 +15,15 @@ export default function WelcomeSection() {
       </h1>
 
       <div data-aos="zoom-in" className="flex flex-row p-2 mt-7">
-        <TypedText
-          strings={[
-            "A Front-End Developer. ",
-            "A Linux Enthusiast. ",
-            "A Problem Solver. ",
-          ]}
-        />
+        <div className="relative h-8">
+          <TypedText
+            strings={[
+              "A Front-End Developer. ",
+              "A Linux Enthusiast. ",
+              "A Problem Solver. ",
+            ]}
+          />
+        </div>
       </div>
 
       <div
