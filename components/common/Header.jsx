@@ -1,11 +1,49 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import clsx from "clsx";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [currentSection, setCurrentSection] = useState("");
 
   const navItems = ["Welcome", "About", "Skills", "Projects", "Contact"];
+
+  // Scroll to section smoothly
+  const handleScroll = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      const headerOffset = 80; // set this to your header height
+      const elementPosition = el.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+    setOpen(false); // close mobile menu
+  };
+
+  // Update active section on scroll
+  useEffect(() => {
+    const onScroll = () => {
+      const scrollPos = window.scrollY + window.innerHeight / 2; // middle of viewport
+      const current = navItems.find((id) => {
+        const el = document.getElementById(id);
+        return (
+          el &&
+          el.offsetTop <= scrollPos &&
+          scrollPos < el.offsetTop + el.offsetHeight
+        );
+      });
+      setCurrentSection(current || "");
+    };
+
+    window.addEventListener("scroll", onScroll);
+    onScroll(); // initial check
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <header className="fixed top-0 z-20 w-full">
@@ -41,16 +79,22 @@ export default function Header() {
 
           {/* Desktop menu */}
           <div className="hidden lg:flex lg:gap-x-4">
-            {navItems.map((item) => (
-              <a
-                key={item}
-                href={`#${item}`}
-                className="group relative rounded-xl px-5 py-2 text-xl font-light text-white/90 ease-in-out transition-all duration-300 hover:scale-105 hover:bg-purple-900/70"
-              >
-                <span className="relative z-10">{item}</span>
-                <span className="absolute inset-0 rounded-xl bg-purple-800/20 opacity-0 blur-sm transition-opacity duration-300 group-hover:opacity-100"></span>
-              </a>
-            ))}
+            {navItems.map((item) => {
+              const isActive = currentSection === item;
+              return (
+                <button
+                  key={item}
+                  onClick={() => handleScroll(item)}
+                  className={clsx(
+                    "group relative rounded-xl px-5 py-2 text-xl font-light text-white/90 ease-in-out transition-all duration-300 hover:scale-105 hover:bg-purple-900/70",
+                    isActive && "bg-purple-900/70 scale-105"
+                  )}
+                >
+                  {item}
+                  <span className="absolute inset-0 rounded-xl bg-purple-800/20 opacity-0 blur-sm transition-opacity duration-300 group-hover:opacity-100"></span>
+                </button>
+              );
+            })}
           </div>
         </nav>
       </div>
@@ -86,16 +130,21 @@ export default function Header() {
           {/* Mobile links */}
           <div className="mt-10 flow-root">
             <div className="space-y-6 text-left">
-              {navItems.map((item) => (
-                <a
-                  key={item}
-                  href={`#${item}`}
-                  className="block px-4 py-4 text-lg font-semibold text-white border-purple-500 border-b"
-                  onClick={() => setOpen(false)}
-                >
-                  {item}
-                </a>
-              ))}
+              {navItems.map((item) => {
+                const isActive = currentSection === item;
+                return (
+                  <button
+                    key={item}
+                    onClick={() => handleScroll(item)}
+                    className={clsx(
+                      "block px-4 py-4 text-lg font-semibold text-white border-purple-500 border-b",
+                      isActive && "bg-purple-900/70"
+                    )}
+                  >
+                    {item}
+                  </button>
+                );
+              })}
             </div>
           </div>
         </div>
