@@ -21,3 +21,10 @@ body {
   background: var(--background);
   color: var(--foreground);
 }
+
+.typed-cursor {
+  font-size: 1.5em; /* makes it taller */
+  font-weight: bold; /* makes it thicker */
+  line-height: 1; /* align better */
+  color: #e4dbe1db; /* optional color */
+}
