@@ -27,7 +27,7 @@ export default function TypedText({ strings }) {
     <span
       id="typed-cursor"
       ref={el}
-      className="inline h-1 text-lg sm:text-xl md:text-2xl tracking-wide text-purple-300"
+      className="inline h-1 text-lg sm:text-xl md:text-2xl tracking-wide"
     />
   );
 }

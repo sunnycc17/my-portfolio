@@ -1,30 +1,33 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-}
-
 .typed-cursor {
   font-size: 1.5em; /* makes it taller */
   font-weight: bold; /* makes it thicker */
   line-height: 1; /* align better */
-  color: #e4dbe1db; /* optional color */
+}
+
+
+:root {
+  --clr-primary: #F2BB05; 
+  --clr-seondary: #EDDEA4; 
+}
+
+#btn1 {
+  background-color: var(--clr-primary);
+  color: #222222;
+}
+#hw {
+  color: var(--clr-primary);
+}
+
+#hero-accent {
+  color: #e4773c;
+}
+
+.border-colour {
+  background-color: var(--clr-primary);
+}
+
+.highlight-primary {
+  color: var(--clr-primary)
 }

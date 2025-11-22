@@ -1,49 +1,42 @@
-import Link from "next/link";
 import TypedText from "./TypedText";
+import ActionButtons from "./ActionButtons";
+import AnimatedFlowers from "./AnimatedFlowers";
 
 export default function WelcomeSection() {
   return (
     <section
       id="Welcome"
-      className="relative flex h-screen flex-col items-center justify-center px-4 space-y-3"
+      className="relative h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-16 pt-24 md:pt-0 overflow-hidden"
     >
-      <h1
-        data-aos="zoom-in"
-        className="xsm:text-lg relative border-b text-center py-4 text-4xl font-light tracking-wide sm:text-3xl md:text-5xl xl:text-6xl"
-      >
-        Hello, I'm Krista.
-      </h1>
+      <div className="absolute inset-0 pointer-events-none select-none"></div>
 
-      <div data-aos="zoom-in" className="flex flex-row p-2 mt-7">
-        <div className="relative h-8">
+      <div className="relative z-10 flex-1 flex flex-col items-start justify-center space-y-6 md:pr-12">
+        <h2
+          id="hw"
+          className=" font-bold uppercase tracking-wide text-sm md:text-base"
+        >
+          Hello & Welcome
+        </h2>
+
+        <h1 className="text-4xl md:text-6xl font-extrabold leading-tight md:leading-snug">
+          I'm Krista, <br /> building{" "}
+          <span id="hero-accent"> dynamic web experiences</span>.
+        </h1>
+
+        <div className="text-lg md:text-2xl h-10 flex items-center ">
           <TypedText
             strings={[
-              "A Front-End Developer. ",
-              "A Linux Enthusiast. ",
-              "A Problem Solver. ",
+              "Front-End Developer.",
+              "Linux Enthusiast.",
+              "Problem Solver.",
             ]}
           />
         </div>
+
+        <ActionButtons />
       </div>
 
-      <div
-        className="relative flex flex-wrap justify-center gap-6 md:gap-10 pt-7 mt-12"
-        data-aos="fade-up"
-      >
-        <Link
-          href="/resume"
-          className="inline-block bg-linear-to-r from-purple-600 via-purple-700 to-purple-800 text-white px-10 md:px-14 py-3 md:py-4 rounded-2xl font-semibold tracking-wide"
-        >
-          Resume
-        </Link>
-
-        <Link
-          href="#Projects"
-          className="inline-block bg-linear-to-r from-purple-600 via-purple-700 to-purple-800 text-white px-10 md:px-14 py-3 md:py-4 rounded-2xl font-semibold tracking-wide"
-        >
-          Projects
-        </Link>
-      </div>
+      <AnimatedFlowers />
     </section>
   );
 }

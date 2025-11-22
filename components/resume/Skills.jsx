@@ -1,7 +1,7 @@
 export default function Skills() {
   return (
-    <section data-aos="fade-up" className="my-20 text-left text-white/90">
-      <h2 className="mb-8 border-l-4 border-purple-400 pl-4 text-3xl font-semibold sm:text-4xl lg:text-5xl hover:text-purple-300 transition">
+    <section data-aos="fade-up" className="my-20 text-left">
+      <h2 className="mb-8 border-l-4  pl-4 text-3xl font-semibold sm:text-4xl lg:text-5xl transition">
         Skills
       </h2>
       <div className="space-y-4">
@@ -17,7 +17,7 @@ export default function Skills() {
           "Git – Version control for tracking changes and collaborating on projects.",
         ].map((skill, i) => (
           <p key={i}>
-            <strong className="text-blue-200">{skill.split(" – ")[0]}</strong> –{" "}
+            <strong>{skill.split(" – ")[0]}</strong> –{" "}
             {skill.split(" – ")[1]}
           </p>
         ))}
