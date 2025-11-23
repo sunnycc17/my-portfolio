@@ -1,4 +1,19 @@
 export default function ProjectsSection() {
+  const projects = [
+    {
+      title: "Fitness Trainer SPA",
+      description: "A simple html tailwind SPA with parallax images.",
+      image: "/project1.webp",
+      link: "#",
+    },
+    {
+      title: "Botany Book",
+      description: "A react typescript project with Algolia API for search.",
+      image: "/project2.webp",
+      link: "#",
+    },
+  ];
+
   return (
     <section
       id="Projects"
@@ -25,12 +40,10 @@ export default function ProjectsSection() {
           <p data-aos="fade-up">
             Projects emerge from disciplined iteration and structured execution.
           </p>
-
           <p data-aos="fade-up">
             Solutions are refined through direct testing and reduction of
             friction.
           </p>
-
           <p data-aos="fade-up" className="highlight-primary font-semibold">
             Each build reflects progression, precision, and deliberate design.
           </p>
@@ -38,8 +51,27 @@ export default function ProjectsSection() {
 
         <div
           data-aos="fade-up"
-          className="projects my-16 grid grid-cols-1 place-items-start gap-10 sm:grid-cols-2 lg:grid-cols-2"
-        ></div>
+          className="projects my-16 grid grid-cols-1 sm:grid-cols-2 gap-10"
+        >
+          {projects.map((project, index) => (
+            <a
+              key={index}
+              href={project.link}
+              target="_blank"
+              className="relative group w-full overflow-hidden rounded-lg shadow-lg"
+            >
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                <h4 className="font-semibold text-lg">{project.title}</h4>
+                <p className="text-sm">{project.description}</p>
+              </div>
+            </a>
+          ))}
+        </div>
 
         <div className="mt-8 flex justify-start">
           <a
