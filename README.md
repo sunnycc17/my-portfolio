@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+<a href="https://www.flaticon.com/free-icons/flower" title="flower icons">Flower icons created by jocularityart - Flaticon</a>
+
 ## Getting Started
 
 First, run the development server:

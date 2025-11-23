@@ -6,10 +6,9 @@
   line-height: 1; /* align better */
 }
 
-
 :root {
-  --clr-primary: #F2BB05; 
-  --clr-seondary: #EDDEA4; 
+  --clr-primary: #f2bb05;
+  --clr-seondary: #eddea4;
 }
 
 #btn1 {
@@ -29,5 +28,10 @@
 }
 
 .highlight-primary {
-  color: var(--clr-primary)
+  color: var(--clr-primary);
+}
+
+#btn2 {
+  border: 2px solid var(--clr-primary);
+  background: #222222;
 }
