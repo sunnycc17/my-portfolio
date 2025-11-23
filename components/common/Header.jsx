@@ -36,22 +36,25 @@ export default function Header() {
 
   const Hamburger = ({ active }) => (
     <div className="relative w-5 h-5">
+      {/* Top line */}
       <span
         className={clsx(
-          "absolute left-0 top-1/2 w-5 h-0.5 bg-white origin-center transition-all duration-300",
-          active ? "rotate-45 -translate-y-0.5" : "-translate-y-1.5"
+          "absolute left-0 top-1/2 w-5 h-0.5 bg-white origin-center transition-transform duration-300",
+          active ? "rotate-45" : "-translate-y-1.5"
         )}
       />
+      {/* Middle line */}
       <span
         className={clsx(
           "absolute left-0 top-1/2 w-5 h-0.5 bg-white transition-opacity duration-200",
           active ? "opacity-0" : "opacity-100"
         )}
       />
+      {/* Bottom line */}
       <span
         className={clsx(
-          "absolute left-0 top-1/2 w-5 h-0.5 bg-white origin-center transition-all duration-300",
-          active ? "-rotate-45 translate-y-0.5" : "translate-y-1.5"
+          "absolute left-0 top-1/2 w-5 h-0.5 bg-white origin-center transition-transform duration-300",
+          active ? "-rotate-45" : "translate-y-1.5"
         )}
       />
     </div>
