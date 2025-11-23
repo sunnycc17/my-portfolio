@@ -4,19 +4,19 @@ export default function AnimatedFlowers() {
   return (
     <div className="flex-1 relative w-full h-96 md:h-full mt-12 md:mt-0 pointer-events-none">
       <img
-        src="/flower3.svg"
+        src="/flower.svg"
         alt=""
         className="absolute w-80 h-80 top-10 right-10 animate-blob hover:scale-105 transition-transform duration-500"
       />
 
       <img
-        src="/flower5.svg"
+        src="/flower.svg"
         alt=""
         className="absolute w-64 h-64 bottom-20 left-1/4 animate-blob animation-delay-1500 hover:scale-105 transition-transform duration-500"
       />
 
       <img
-        src="/flower4.svg"
+        src="/flower.svg"
         alt=""
         className="absolute w-40 h-40 top-1/3 left-2/3 animate-blob animation-delay-3000 hover:scale-105 transition-transform duration-500"
       />
