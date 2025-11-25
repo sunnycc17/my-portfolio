@@ -62,7 +62,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 z-20 w-full">
-      <div className="sidebar">
+      <div className="backdrop-blur-sm">
         <nav className="mx-auto flex max-w-7xl items-center justify-center p-6 sm:p-4">
           <div className="absolute right-0 flex p-2 lg:hidden">
             <button

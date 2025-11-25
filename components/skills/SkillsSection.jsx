@@ -14,7 +14,7 @@ export default function SkillsSection() {
         </h2>
 
         {/* Subheading */}
-        <h3 className="highlight-primary text-2xl sm:text-3xl md:text-4xl font-bold mt-2 mb-5">
+        <h3 className="highlight-secondary text-2xl sm:text-3xl md:text-4xl font-bold mt-2 mb-5">
           Core languages, tools, and frameworks shaping each build.
         </h3>
 
@@ -23,7 +23,7 @@ export default function SkillsSection() {
           <p>Tailwind enables fast, structured styling within the markup, keeping the flow efficient across projects.</p>
           <p>The stack expands as needed. New tools are added based on project demands.</p>
           <p className="font-medium">
-            These tools aren’t just familiar—they are <span className="highlight-secondary">embedded in the workflow</span>.
+            These tools aren’t just familiar—they are <span className="highlight-primary">embedded in the workflow</span>.
           </p>
         </div>
 

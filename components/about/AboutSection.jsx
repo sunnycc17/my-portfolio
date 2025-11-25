@@ -18,7 +18,7 @@ export default function AboutSection() {
         {/* Subheading */}
         <h3
           data-aos="fade-up"
-          className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 mb-5"
+          className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 mb-5 highlight-secondary"
         >
           Every build is shaped around clear structure and purposeful design.
         </h3>
@@ -42,7 +42,7 @@ export default function AboutSection() {
               persistent execution
             </span>{" "}
             and
-            <span className="highlight-secondary font-semibold">
+            <span className="highlight-primary font-semibold">
               {" "}
               adaptive problem-solving
             </span>
