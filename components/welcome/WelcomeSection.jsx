@@ -20,7 +20,7 @@ export default function WelcomeSection() {
 
         <h1 className="text-4xl md:text-6xl font-extrabold leading-tight md:leading-snug">
           I'm Krista, <br /> building{" "}
-          <span id="hero-accent"> dynamic web experiences</span>.
+          <span className="highlight-secondary"> dynamic web experiences</span>.
         </h1>
 
         <div className="text-lg md:text-2xl h-10 flex items-center ">

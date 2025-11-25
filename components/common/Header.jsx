@@ -62,7 +62,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 z-20 w-full">
-      <div className="backdrop-blur-sm">
+      <div className="sidebar">
         <nav className="mx-auto flex max-w-7xl items-center justify-center p-6 sm:p-4">
           <div className="absolute right-0 flex p-2 lg:hidden">
             <button
@@ -99,14 +99,14 @@ export default function Header() {
 
       <div
         className={clsx(
-          "lg:hidden fixed inset-y-0 right-0 z-10 w-64 overflow-hidden bg-[#222222] px-6 py-6 sm:max-w-sm transform transition-all duration-700 ease-in-out border-l border-[#1a1a1a]",
+          "lg:hidden sidebar fixed inset-y-0 right-0 z-10 w-64 overflow-hidden px-6 py-6 sm:max-w-sm transform transition-all duration-700 ease-in-out border-l",
           open ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
         )}
       >
         <div className="flex items-center justify-end mb-4">
           <button
             type="button"
-            className="rounded-md p/2"
+            className="rounded-md"
             onClick={() => setOpen(false)}
           >
             <Hamburger active={open} />
@@ -114,7 +114,7 @@ export default function Header() {
         </div>
 
         <div className="flow-root">
-          <div className="divide-y divide-[#f7f751] text-left">
+          <div className="divide-y divide-[#FF9F1C]  text-left">
             {navItems.map((item) => (
               <button
                 key={item}

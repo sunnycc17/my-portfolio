@@ -7,31 +7,34 @@
 }
 
 :root {
-  --clr-primary: #f2bb05;
-  --clr-seondary: #eddea4;
+  --primary: #FF9F1C;
+  --secondary: #CC5803;
+  --bg: #262626;
 }
 
 #btn1 {
-  background-color: var(--clr-primary);
-  color: #222222;
+  background-color: var(--primary);
+  color: var(--bg) !important;
 }
 #hw {
-  color: var(--clr-primary);
-}
-
-#hero-accent {
-  color: #e4773c;
+  color: var(--primary);
 }
 
 .border-colour {
-  background-color: var(--clr-primary);
+  background-color: var(--primary);
 }
 
 .highlight-primary {
-  color: var(--clr-primary);
+  color: var(--primary);
+}
+.highlight-secondary {
+  color: var(--secondary);
 }
 
 #btn2 {
-  border: 2px solid var(--clr-primary);
-  background: #222222;
+  border: 2px solid var(--primary);
+}
+
+.sidebar {
+  background-color: var(--bg);
 }

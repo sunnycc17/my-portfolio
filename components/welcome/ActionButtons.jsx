@@ -6,15 +6,19 @@ export default function ActionButtons() {
   return (
     <div className="flex gap-6 mt-6">
       <Link
-        href="/resume"
+        href="/resume.pdf"
+        prefetch={false}
         id="btn1"
-        className="
-           px-8 md:px-12 py-3 md:py-4 rounded-2xl font-semibold tracking-wide
-           transform transition-transform duration-150
-          active:translate-y-[3px] 
-          hover:brightness-110
-        "
+        className="px-8 md:px-12 py-3 md:py-4 rounded-2xl
+        font-semibold tracking-wide transform transition-transform duration-150
+        active:translate-y-[3px] hover:brightness-110 focus:outline-none
+        focus-visible:ring-2 focus-visible:ring-offset-2"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Open resume (PDF) in a new tab"
+        title="Open resume (PDF)"
       >
+        {" "}
         Resume
       </Link>
 
