@@ -78,7 +78,7 @@ export default function ProjectsSection() {
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="group overflow-hidden rounded-lg shadow-lg"
+            className="group overflow-hidden"
           >
             <Image
               src={project.image}
@@ -89,11 +89,11 @@ export default function ProjectsSection() {
               priority={index < 2} // optionally preload first 2 images
             />
             <div className="mt-2">
-              <div className="space-y-2">
-                <h4 className="text-2xl font-bold text-orange-400 uppercase tracking-wider relative before:content-[''] before:block before:w-12 before:h-1 before:bg-orange-500 before:rounded-full before:absolute before:-bottom-2">
+              <div className="space-y-1">
+                <h4 className="text-lg font-medium uppercase text-gray-300 tracking-wide">
                   {project.title}
                 </h4>
-                <p className="text-gray-300 text-base md:text-lg leading-relaxed">
+                <p className="text-sm text-gray-400 leading-relaxed">
                   {project.description}
                 </p>
               </div>
