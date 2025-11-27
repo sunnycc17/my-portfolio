@@ -7,21 +7,21 @@ export default function AnimatedFlowers() {
       <img
         src="/flower.svg"
         alt=""
-        className="absolute w-72 h-72 -top-4 -right-10 md:w-80 md:h-80 md:top-16 md:right-10 animate-blob hover:scale-105 transition-transform duration-500"
+        className="absolute w-60 h-60 -top-4 -right-8 md:w-80 md:h-80 md:top-16 md:right-10 animate-blob hover:scale-105 transition-transform duration-500 drop-shadow-2xl"
       />
 
       {/* Bottom-left flower */}
       <img
         src="/flower.svg"
         alt=""
-        className="absolute w-36 h-36 -bottom-1 -left-4 md:w-64 md:h-64 md:bottom-28 md:left-1/4 animate-blob animation-delay-1500 hover:scale-105 transition-transform duration-500"
+        className="absolute w-28 h-28 bottom-1 -right-4 md:w-64 md:h-64 md:bottom-28 md:left-1/4 animate-blob animation-delay-1500 hover:scale-105 transition-transform duration-500 drop-shadow-2xl"
       />
 
       {/* Center-right flower */}
       <img
         src="/flower.svg"
         alt=""
-        className="absolute w-40 h-40 top-28 left-1/2 md:w-40 md:h-40 md:top-1/3 md:left-2/3 animate-blob animation-delay-3000 hover:scale-105 transition-transform duration-500"
+        className="absolute w-36 h-36 top-28 right-1/2 md:w-40 md:h-40 md:top-5/12 md:left-2/3 animate-blob animation-delay-3000 hover:scale-105 transition-transform duration-500 drop-shadow-2xl"
       />
 
       <style jsx>{`

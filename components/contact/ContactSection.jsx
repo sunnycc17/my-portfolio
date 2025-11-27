@@ -14,7 +14,7 @@ export default function ContactSection() {
           </span>
         </h2>
 
-        <h1 className="text-4xl md:text-6xl font-extrabold leading-tight md:leading-snug highlight-primary">
+        <h1 className="text-4xl md:text-6xl font-extrabold leading-tight md:leading-snug highlight-secondary">
           Let’s work together.
         </h1>
 
