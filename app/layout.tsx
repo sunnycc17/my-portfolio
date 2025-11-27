@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Krista Vogli | Portfolio",
     description: "Portfolio of Krista Vogli – Web Developer and Designer",
-    url: "https://my-portfolio-six-dun-65.vercel.app/",
+    url: "https://my-portfolio-six-dun-65.vercel.app/og-image.png",
     siteName: "Krista Vogli | Portfolio",
     images: [
       {
