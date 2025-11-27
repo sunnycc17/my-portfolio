@@ -121,6 +121,11 @@ export default function SkillsSection() {
                 label="Linux"
                 className="text-gray-300"
               />
+              <SkillItem
+                logo="figma.svg"
+                label="Figma"
+                className="text-gray-300"
+              />
             </div>
           </div>
         </div>
