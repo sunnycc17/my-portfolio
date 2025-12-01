@@ -23,7 +23,7 @@ export default function WelcomeSection() {
           <span className="highlight-secondary"> dynamic web experiences</span>.
         </h1>
 
-        <div className="text-lg md:text-2xl h-10 flex items-center ">
+        <kbd className="text-lg md:text-2xl h-10 flex items-center ">
           <TypedText
             strings={[
               "Front-End Developer.",
@@ -31,7 +31,7 @@ export default function WelcomeSection() {
               "Problem Solver.",
             ]}
           />
-        </div>
+        </kbd>
 
         <ActionButtons />
       </div>
