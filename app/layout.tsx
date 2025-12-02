@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: "Krista Vogli | Portfolio",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image-v2.png",
         width: 1200,
         height: 630,
       },
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Krista Vogli | Portfolio",
     description: "Portfolio of Krista Vogli – Web Developer and Designer",
-    images: ["/og-image.png"],
+    images: ["/og-image-v2.png"],
   },
 };
 
