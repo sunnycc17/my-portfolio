@@ -38,7 +38,7 @@ export default function ProjectsSection() {
   };
 
   return (
-    <section id="Projects" className="min-h-screen px-6 md:px-16 py-24">
+    <section id="Projects" className="min-h-screen py-24">
       <h2 className="text-3xl font-semibold sm:text-4xl lg:text-5xl relative mb-4">
         <span className="relative inline-block ml-4">
           {" "}
@@ -48,22 +48,15 @@ export default function ProjectsSection() {
         </span>
       </h2>
 
-      <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 mb-6 highlight-secondary">
-        Focused builds shaped by clarity and structure.
+      <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 mb-4 highlight-secondary">
+        These sites showcase design and experince with clients.
       </h3>
-
       <div className="text-xl md:text-2xl leading-relaxed space-y-2 mb-12">
-        <p>
-          Projects emerge from disciplined iteration and structured execution.
-        </p>
-        <p>
-          Solutions are refined through direct testing and reduction of
-          friction.
-        </p>
+        <p>I always search for new ideas to implement and seek feedback.</p>
         <p className="font-semibold">
           Each build reflects{" "}
-          <span className="highlight-primary">progression</span> , precision,
-          and <span className="highlight-primary">deliberate</span> design.
+          <span className="highlight-primary">progression</span> and{" "}
+          <span className="highlight-primary">deliberate</span> design.
         </p>
       </div>
 

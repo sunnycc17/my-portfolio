@@ -6,16 +6,19 @@ import ContactSection from "../components/contact/ContactSection.jsx";
 import Header from "../components/common/Header.jsx";
 import Footer from "../components/common/Footer.jsx";
 
-
 export default function Home() {
   return (
-    <main>
+    <main className="w-full flex flex-col items-center overflow-x-hidden">
       <Header />
-      <WelcomeSection />
-      <AboutSection />
-      <SkillsSection />
-      <ProjectsSection />
-      <ContactSection />
+
+      <div className="w-full max-w-[1400px] px-4 md:px-6">
+        <WelcomeSection />
+        <AboutSection />
+        <SkillsSection />
+        <ProjectsSection />
+        <ContactSection />
+      </div>
+
       <Footer />
     </main>
   );

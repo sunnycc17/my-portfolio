@@ -4,9 +4,9 @@ export default function ContactSection() {
   return (
     <section
       id="Contact"
-      className="relative h-screen flex flex-col items-start justify-center px-6 md:px-16 pt-24 overflow-hidden"
+      className="relative h-screen flex flex-col items-start justify-center py-24"
     >
-      <div className="relative z-10 flex flex-col items-start justify-center space-y-8 max-w-3xl">
+      <div className="relative z-10 flex flex-col items-start justify-center max-w-3xl">
         <h2 className="text-3xl font-semibold sm:text-4xl lg:text-5xl relative mb-4">
           <span className="relative inline-block ml-4">
             <span className="absolute -left-5 top-1/2 -translate-y-1/2 h-12 w-1 border-colour" />

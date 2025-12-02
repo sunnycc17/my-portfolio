@@ -6,7 +6,7 @@ export default function WelcomeSection() {
   return (
     <section
       id="Welcome"
-      className="relative h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-16 pt-24 md:pt-0 overflow-hidden"
+      className="relative h-screen flex flex-col md:flex-row items-center justify-center overflow-visible"
     >
       <div className="absolute inset-0 pointer-events-none select-none"></div>
 
