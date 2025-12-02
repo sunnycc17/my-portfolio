@@ -49,11 +49,11 @@ export default function ProjectsSection() {
       </h2>
 
       <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 mb-4 highlight-secondary">
-        These sites showcase design and experince with clients.
+        These sites showcase design and experience with clients.
       </h3>
       <div className="text-xl md:text-2xl leading-relaxed space-y-2 mb-12">
         <p>I always search for new ideas to implement and seek feedback.</p>
-        <p className="font-semibold">
+        <p>
           Each build reflects{" "}
           <span className="highlight-primary">progression</span> and{" "}
           <span className="highlight-primary">deliberate</span> design.

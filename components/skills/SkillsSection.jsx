@@ -24,9 +24,16 @@ export default function SkillsSection() {
           <p>
             React is great for scaling projects and DRY with its components.
           </p>
-          <p className="font-medium">
-            Next and Vercel are just amazing. They provide so many cool features
-            and insights.
+          <p>
+            Next and Vercel are just amazing. They provide so many
+            <span className="font-medium highlight-primary">
+              {" "}
+              cool features
+            </span>{" "}
+            and <span className="font-medium highlight-primary">
+              insights
+            </span>{" "}
+            .
           </p>
         </div>
         {/* SKILLS */}

@@ -21,8 +21,7 @@ export default function AboutSection() {
 
         <div className="text-xl md:text-2xl leading-relaxed space-y-2">
           <p>
-            Performance, efficiency and aesthetics drive the way I
-            approach every project.
+            Performance, efficiency and aesthetics are my foundation.
           </p>
 
           <p>
