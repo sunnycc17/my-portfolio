@@ -14,14 +14,14 @@ export default function AnimatedFlowers() {
       <img
         src="/flower2.svg"
         alt=""
-        className="absolute w-28 h-28 bottom-8 -right-4 md:w-60 md:h-60 md:bottom-15 md:left-40 animate-blob animation-delay-1500 drop-shadow-sm drop-shadow-black"
+        className="absolute w-28 h-28 bottom-8 -right-4 md:w-60 md:h-60 md:bottom-15 md:right-60 animate-blob animation-delay-1500 drop-shadow-sm drop-shadow-black"
       />
 
       {/* Mid-right */}
       <img
         src="/flower2.svg"
         alt=""
-        className="absolute w-36 h-36 top-15 left-4 md:w-40 md:h-40 md:top-6/12 md:left-2/3 animate-blob animation-delay-3000 drop-shadow-sm drop-shadow-black"
+        className="absolute w-36 h-36 top-15 left-4 md:w-40 md:h-40 md:top-6/12 md:left-12 animate-blob animation-delay-3000 drop-shadow-sm drop-shadow-black"
       />
       <style jsx>{`
         @keyframes blob {
