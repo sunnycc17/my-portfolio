@@ -7,6 +7,7 @@ export default function ActionButtons() {
     <div className="flex gap-6 mt-6">
       <Link
         href="/resume.pdf"
+        type="application/pdf"
         prefetch={false}
         id="btn1"
         className="px-8 md:px-12 py-3 md:py-4 rounded-2xl
@@ -19,7 +20,7 @@ export default function ActionButtons() {
         title="Open resume (PDF)"
       >
         {" "}
-        Resume
+        Resume (PDF)
       </Link>
 
       <Link
