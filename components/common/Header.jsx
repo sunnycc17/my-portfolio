@@ -86,7 +86,7 @@ export default function Header() {
                   key={item}
                   onClick={() => handleScroll(item)}
                   className={clsx(
-                    "relative rounded-xl px-5 py-2 text-xl transition-all duration-300",
+                    "relative cursor-pointer rounded-xl px-5 py-2 text-xl transition-all duration-300",
                     "hover:scale-110 hover:opacity-80",
                     active && "highlight-primary scale-110",
                     active &&

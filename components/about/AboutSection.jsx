@@ -29,15 +29,11 @@ export default function AboutSection() {
           </p>
 
           <p>
-            My core strengths:
+            My core strengths:{" "}
+            <span className="highlight-primary font-semibold">persistence</span>{" "}
+            and{" "}
             <span className="highlight-primary font-semibold">
-              {" "}
-              persistence{" "}
-            </span>
-            and
-            <span className="highlight-primary font-semibold">
-              {" "}
-              methodical problem-solving{" "}
+              methodical problem-solving
             </span>
             .
           </p>
