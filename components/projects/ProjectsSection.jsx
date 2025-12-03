@@ -75,12 +75,14 @@ export default function ProjectsSection() {
           >
             <Image
               src={project.image}
-              alt={project.title}
+              alt=""
+              aria-hidden="true"
               width={project.width}
               height={project.height}
               className="w-full h-auto object-cover transition-opacity duration-200 group-hover:opacity-70 rounded-lg"
-              priority={index < 2} // optionally preload first 2 images
+              priority={index < 2}
             />
+
             <div className="mt-2">
               <div className="space-y-1">
                 <h4 className="text-lg font-medium uppercase text-gray-300 tracking-wide">
