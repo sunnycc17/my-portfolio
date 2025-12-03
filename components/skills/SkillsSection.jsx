@@ -2,7 +2,7 @@ export default function SkillsSection() {
   return (
     <section
       id="Skills"
-      className="relative min-h-screen flex flex-col md:flex-row items-start justify-start py-24 mb-32"
+      className="relative flex flex-col md:flex-row items-start justify-start py-24 md:py-32 lg:py-40"
     >
       <div className="relative z-10 flex-1 flex flex-col items-start justify-start space-y-6 md:pr-12 max-w-4xl text-left">
         {/* Heading */}

@@ -4,7 +4,7 @@ export default function ContactSection() {
   return (
     <section
       id="Contact"
-      className="relative h-screen flex flex-col items-start justify-center py-24"
+      className="relative flex flex-col items-start justify-center py-24 md:py-32 lg:py-40"
     >
       <div className="relative z-10 flex flex-col items-start justify-center max-w-3xl">
         <h2 className="text-3xl font-semibold sm:text-4xl lg:text-5xl relative mb-4">
@@ -28,7 +28,9 @@ export default function ContactSection() {
             target="_blank"
             className="flex items-center gap-2 text-2xl font-bold text-orange-400 group"
           >
-            <span className="transform transition-all group-hover:translate-x-2">→</span>
+            <span className="transform transition-all group-hover:translate-x-2">
+              →
+            </span>
             LinkedIn
           </Link>
 
@@ -37,7 +39,9 @@ export default function ContactSection() {
             target="_blank"
             className="flex items-center gap-2 text-2xl font-bold text-orange-400 group"
           >
-            <span className="transform transition-all group-hover:translate-x-2">→</span>
+            <span className="transform transition-all group-hover:translate-x-2">
+              →
+            </span>
             GitHub
           </Link>
 
@@ -45,7 +49,9 @@ export default function ContactSection() {
             href="mailto:vogkristina@gmail.com"
             className="flex items-center gap-2 text-2xl font-bold text-orange-400 group"
           >
-            <span className="transform transition-all group-hover:translate-x-2">→</span>
+            <span className="transform transition-all group-hover:translate-x-2">
+              →
+            </span>
             Email
           </Link>
         </div>

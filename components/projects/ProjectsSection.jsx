@@ -38,7 +38,7 @@ export default function ProjectsSection() {
   };
 
   return (
-    <section id="Projects" className="min-h-screen py-24">
+    <section id="Projects" className="py-24 md:py-32 lg:py-40">
       <h2 className="text-3xl font-semibold sm:text-4xl lg:text-5xl relative mb-4">
         <span className="relative inline-block ml-4">
           {" "}

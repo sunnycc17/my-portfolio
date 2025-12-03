@@ -2,7 +2,7 @@ export default function AboutSection() {
   return (
     <section
       id="About"
-      className="relative min-h-screen flex flex-col md:flex-row items-start justify-start py-24"
+      className="relative flex flex-col md:flex-row items-center justify-start py-24 md:py-32 lg:py-40"
     >
       <div className="relative z-10 flex-1 flex flex-col items-start justify-start space-y-6 md:pr-12 max-w-4xl text-left">
         <h2 className="text-3xl font-semibold sm:text-4xl lg:text-5xl relative mb-4">
@@ -20,9 +20,7 @@ export default function AboutSection() {
         </h3>
 
         <div className="text-xl md:text-2xl leading-relaxed space-y-2">
-          <p>
-            Performance, efficiency and aesthetics are my foundation.
-          </p>
+          <p>Performance, efficiency and aesthetics are my foundation.</p>
 
           <p>
             I’m naturally curious and always digging into how systems work. When
