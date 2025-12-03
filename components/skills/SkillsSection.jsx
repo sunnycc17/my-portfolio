@@ -85,15 +85,16 @@ export default function SkillsSection() {
   );
 }
 
-function SkillItem({ logo, label, highlight }) {
+function SkillItem({ logo, label }) {
   return (
     <div className="flex items-center gap-4">
-      <img src={logo} alt={label} className="h-14 w-14" />
-      <span
-        className={`text-xl md:text-2xl font-semibold ${
-          highlight ? "highlight-primary" : ""
-        }`}
-      >
+      <img
+        src={logo}
+        alt=""
+        aria-hidden="true"
+        className="h-14 w-14"
+      />
+      <span className="text-xl md:text-2xl font-semibold">
         {label}
       </span>
     </div>
