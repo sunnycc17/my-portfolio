@@ -14,13 +14,13 @@ export default function ContactSection() {
           </span>
         </h2>
 
-        <h1 className="text-4xl md:text-6xl font-extrabold leading-tight md:leading-snug highlight-secondary">
+        <h3 className="text-4xl md:text-6xl font-extrabold leading-tight md:leading-snug highlight-secondary">
           Let’s work together.
-        </h1>
+        </h3>
 
-        <p className="text-lg md:text-2xl leading-relaxed">
+        <h4 className="text-lg md:text-2xl leading-relaxed">
           I’d love to hear about your favourite sandwich.
-        </p>
+        </h4>
 
         <div className="flex flex-col sm:flex-row sm:gap-10 gap-6 pt-6">
           <Link
@@ -50,9 +50,9 @@ export default function ContactSection() {
           </Link>
         </div>
 
-        <h3 className="text-xl md:text-2xl font-medium pt-8">
+        <h5 className="text-xl md:text-2xl font-medium pt-8">
           So reach out to me, maybe?
-        </h3>
+        </h5>
       </div>
     </section>
   );
