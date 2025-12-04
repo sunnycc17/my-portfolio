@@ -23,7 +23,7 @@ export default function WelcomeSection() {
           <span className="highlight-secondary"> dynamic web experiences</span>.
         </h1>
 
-        <kbd className="text-lg md:text-2xl h-10 flex items-center ">
+        <kbd className="text-lg md:text-2xl flex items-center gap-1">
           <TypedText
             strings={[
               "Front-End Developer.",

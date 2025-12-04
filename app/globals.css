@@ -1,10 +1,23 @@
 @import "tailwindcss";
 
-.typed-cursor {
-  font-weight: 900 !important;
-  font-size: 1.5em !important;
-  line-height: 1 !important;
-  font-family: sans-serif !important;
+.typed-static-cursor {
+  display: inline-block;
+  margin-left: 0.1em;
+  animation: blink 0.8s infinite steps(1);
+  font-weight: 900;
+  vertical-align: baseline;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 :root {

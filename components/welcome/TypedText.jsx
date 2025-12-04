@@ -3,21 +3,24 @@
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
 
-export default function TypedText({ strings }) {
+export default function TypedText({ strings = [] }) {
   const el = useRef(null);
+  const cursorRef = useRef(null);
+
+  // longest string width pre-reserved
+  const longest = strings.reduce((max, s) => Math.max(max, s.length), 0);
 
   useEffect(() => {
     if (!el.current) return;
 
     const typed = new Typed(el.current, {
-      strings: strings,
-      typeSpeed: 35, // slightly slower for smoother typing
-      backSpeed: 20, // slower deletion
-      backDelay: 2000, // longer pause before deleting
+      strings,
+      typeSpeed: 35,
+      backSpeed: 20,
+      backDelay: 2000,
       loop: true,
-      startDelay: 500,
-      showCursor: true,
-      cursorChar: "|", // will style with CSS
+      startDelay: 200,
+      showCursor: false, // IMPORTANT
     });
 
     return () => typed.destroy();
@@ -25,9 +28,17 @@ export default function TypedText({ strings }) {
 
   return (
     <span
-      id="typed-cursor"
-      ref={el}
-      className="inline h-1 text-lg sm:text-xl md:text-2xl tracking-wide"
-    />
+      style={{
+        display: "inline-flex",
+        alignItems: "baseline",
+        whiteSpace: "nowrap",
+        minWidth: `${longest}ch`,
+      }}
+    >
+      <span ref={el}>{strings[0]}</span>
+      <span ref={cursorRef} className="typed-static-cursor">
+        |
+      </span>
+    </span>
   );
 }
