@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import clsx from "clsx";
+import { Sling as Hamburger } from "hamburger-react";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -37,43 +38,22 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const Hamburger = ({ active }) => (
-    <div className="relative w-5 h-5">
-      <span
-        className={clsx(
-          "absolute left-0 top-1/2 w-5 h-0.5 bg-white origin-center transition-transform duration-300",
-          active ? "rotate-45" : "-translate-y-1.5"
-        )}
-      />
-      <span
-        className={clsx(
-          "absolute left-0 top-1/2 w-5 h-0.5 bg-white transition-opacity duration-200",
-          active ? "opacity-0" : "opacity-100"
-        )}
-      />
-      <span
-        className={clsx(
-          "absolute left-0 top-1/2 w-5 h-0.5 bg-white origin-center transition-transform duration-300",
-          active ? "-rotate-45" : "translate-y-1.5"
-        )}
-      />
-    </div>
-  );
+  // Shared position for hamburger toggles
+  const hamburgerPosition = "absolute top-6 right-4";
 
   return (
-    <header className="fixed top-0 z-20 w-full">
+    <header className="fixed top-0 z-30 w-full">
       <div className="backdrop-blur-sm">
-        <nav className="mx-auto flex max-w-7xl items-center justify-center p-6 sm:p-4">
-          {/* Mobile toggle */}
-          <div className="absolute right-0 flex p-2 lg:hidden">
-            <button
-              type="button"
-              aria-label={open ? "Close menu" : "Open menu"}
-              className="inline-flex items-center justify-center rounded-md p-3 mt-2"
-              onClick={() => setOpen(!open)}
-            >
-              <Hamburger active={open} />
-            </button>
+        <nav className="mx-auto flex max-w-7xl items-center justify-center p-6 sm:p-4 relative">
+          {/* Mobile toggle (navbar) */}
+          <div className={`lg:hidden ${hamburgerPosition}`}>
+            <Hamburger
+              toggled={open}
+              toggle={setOpen}
+              size={24}
+              duration={0.5}
+              label={open ? "Close menu" : "Open menu"}
+            />
           </div>
 
           {/* Desktop nav */}
@@ -101,31 +81,48 @@ export default function Header() {
         </nav>
       </div>
 
-      {/* Mobile sidebar */}
+      {/* Overlay */}
       <div
         className={clsx(
-          "lg:hidden sidebar fixed inset-y-0 right-0 z-10 w-64 overflow-hidden px-6 py-6 sm:max-w-sm transform transition-all duration-700 ease-in-out border-l",
-          open ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
+          "fixed inset-0 bg-black bg-opacity-50 z-20 transition-opacity duration-500",
+          open
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+        )}
+        onClick={() => setOpen(false)}
+      />
+
+      {/* Mobile sidebar sliding from right */}
+      <div
+        className={clsx(
+          "lg:hidden fixed top-0 right-0 h-full z-30 w-64 overflow-hidden px-6 py-6 sm:max-w-sm bg-[#1A1A1A] shadow-lg transition-transform duration-500 ease-in-out",
+          open ? "translate-x-0" : "translate-x-full"
         )}
       >
-        <div className="flex items-center justify-end mb-4">
-          <button
-            type="button"
-            aria-label="Close menu"
-            className="rounded-md"
-            onClick={() => setOpen(false)}
-          >
-            <Hamburger active={open} />
-          </button>
+        {/* Hamburger inside sidebar (aligned same as navbar toggle) */}
+        <div className={hamburgerPosition}>
+          <Hamburger
+            toggled={open}
+            toggle={setOpen}
+            size={24}
+            duration={0.5}
+            label="Close menu"
+          />
         </div>
 
-        <div className="flow-root">
+        <div className="flow-root mt-16">
           <div className="divide-y divide-[#FF9F1C] text-left">
-            {navItems.map((item) => (
+            {navItems.map((item, index) => (
               <button
                 key={item}
                 onClick={() => handleScroll(item)}
-                className="block w-full px-4 py-6 text-lg font-semibold text-white text-left"
+                className={clsx(
+                  "block w-full px-4 py-6 text-lg font-semibold text-white text-left transform transition duration-500",
+                  open ? "opacity-100 translate-x-0" : "opacity-0 translate-x-6"
+                )}
+                style={{
+                  transitionDelay: `${index * 100}ms`, // stagger items
+                }}
               >
                 {item}
               </button>
