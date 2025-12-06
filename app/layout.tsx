@@ -40,6 +40,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preload" as="image" href="/flower2.svg" />
+      </head>
+
       <body className="antialiased bg-[#262626] text-[#E2E8CE]">
         <SpeedInsights />
         <Analytics />
