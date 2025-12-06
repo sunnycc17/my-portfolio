@@ -1,48 +1,56 @@
 "use client";
 
+import React, { FC } from "react";
 import Masonry from "react-masonry-css";
 import Image from "next/image";
 
-export default function ProjectsSection() {
-  const projects = [
-    {
-      title: "Fitness Trainer SPA",
-      description: "• HTML • Tailwind • CSS",
-      image: "/project.webp",
-      width: 800,
-      height: 450, // horizontal
-      link: "https://sunnycc17.github.io/arne-drinovec-coaching/#home",
-    },
-    {
-      title: "Botany Book",
-      description: "• React • TypeScript • Algolia API",
-      image: "/project-moon.webp",
-      width: 800,
-      height: 450, // horizontal
-      link: "https://sunnycc17.github.io/Magical-Botany-Guide/",
-    },
-    {
-      title: "Sunny Delights",
-      description: "• React • TypeScript • Algolia API",
-      image: "/sunny-delight.webp",
-      width: 800,
-      height: 450, // horizontal
-      link: "https://sunnycc17.github.io/E-commerce-site/",
-    },
-  ];
+interface Project {
+  title: string;
+  description: string;
+  image: string;
+  width: number;
+  height: number;
+  link: string;
+}
 
-  const breakpointColumnsObj = {
-    default: 2,
-    1024: 2,
-    640: 1,
-  };
+const projects: Project[] = [
+  {
+    title: "Fitness Trainer SPA",
+    description: "• HTML • Tailwind • CSS",
+    image: "/project.webp",
+    width: 800,
+    height: 450,
+    link: "https://sunnycc17.github.io/arne-drinovec-coaching/#home",
+  },
+  {
+    title: "Botany Book",
+    description: "• React • TypeScript • Algolia API",
+    image: "/project-moon.webp",
+    width: 800,
+    height: 450,
+    link: "https://sunnycc17.github.io/Magical-Botany-Guide/",
+  },
+  {
+    title: "Sunny Delights",
+    description: "• React • TypeScript • Algolia API",
+    image: "/sunny-delight.webp",
+    width: 800,
+    height: 450,
+    link: "https://sunnycc17.github.io/E-commerce-site/",
+  },
+];
 
+const breakpointColumnsObj = {
+  default: 2,
+  1024: 2,
+  640: 1,
+};
+
+const ProjectsSection: FC = () => {
   return (
     <section id="Projects" className="py-24 md:py-32 lg:py-40">
       <h2 className="text-3xl font-semibold sm:text-4xl lg:text-5xl relative mb-4">
         <span className="relative inline-block ml-4">
-          {" "}
-          {/* moved 1rem to the right */}
           <span className="absolute -left-5 top-1/2 -translate-y-1/2 h-12 w-1 border-colour" />
           Projects
         </span>
@@ -75,8 +83,7 @@ export default function ProjectsSection() {
           >
             <Image
               src={project.image}
-              alt=""
-              aria-hidden="true"
+              alt={project.title}
               width={project.width}
               height={project.height}
               className="w-full h-auto object-cover transition-opacity duration-200 group-hover:opacity-70 rounded-lg"
@@ -110,4 +117,6 @@ export default function ProjectsSection() {
       </div>
     </section>
   );
-}
+};
+
+export default ProjectsSection;

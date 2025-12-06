@@ -1,4 +1,6 @@
-export default function AboutSection() {
+import React, { FC } from "react";
+
+const AboutSection: FC = () => {
   return (
     <section
       id="About"
@@ -41,4 +43,6 @@ export default function AboutSection() {
       </div>
     </section>
   );
-}
+};
+
+export default AboutSection;

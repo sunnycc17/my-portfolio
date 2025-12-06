@@ -1,8 +1,9 @@
+import React, { FC } from "react";
 import TypedText from "./TypedText";
 import ActionButtons from "./ActionButtons";
 import AnimatedFlowers from "./AnimatedFlowers";
 
-export default function WelcomeSection() {
+const WelcomeSection: FC = () => {
   return (
     <section
       id="Welcome"
@@ -13,14 +14,14 @@ export default function WelcomeSection() {
       <div className="relative z-10 flex-1 flex flex-col items-start justify-center space-y-6 md:pr-12">
         <h2
           id="hw"
-          className=" font-bold uppercase tracking-wide text-sm md:text-base"
+          className="font-bold uppercase tracking-wide text-sm md:text-base"
         >
           Hello & Welcome
         </h2>
 
         <h1 className="text-4xl md:text-6xl font-extrabold leading-tight md:leading-snug">
           I'm Krista, <br /> building{" "}
-          <span className="highlight-secondary"> dynamic web experiences</span>.
+          <span className="highlight-secondary">dynamic web experiences</span>.
         </h1>
 
         <kbd className="text-lg md:text-2xl flex items-center gap-1">
@@ -39,4 +40,6 @@ export default function WelcomeSection() {
       <AnimatedFlowers />
     </section>
   );
-}
+};
+
+export default WelcomeSection;

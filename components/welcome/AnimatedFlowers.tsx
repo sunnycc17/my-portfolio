@@ -1,6 +1,8 @@
 "use client";
 
-export default function AnimatedFlowers() {
+import React, { FC } from "react";
+
+const AnimatedFlowers: FC = () => {
   return (
     <div className="relative flex justify-center items-center w-full max-w-[300px] h-[200px] md:h-[520px] md:[700px] mx-auto pointer-events-none overflow-visible">
       {/* Top-right */}
@@ -23,6 +25,7 @@ export default function AnimatedFlowers() {
         alt=""
         className="absolute w-36 h-36 top-15 left-4 md:w-40 md:h-40 md:top-6/12 md:left-12 animate-blob animation-delay-3000 drop-shadow-sm drop-shadow-black"
       />
+
       <style jsx>{`
         @keyframes blob {
           0% {
@@ -51,4 +54,6 @@ export default function AnimatedFlowers() {
       `}</style>
     </div>
   );
-}
+};
+
+export default AnimatedFlowers;

@@ -1,12 +1,13 @@
-import WelcomeSection from "../components/welcome/WelcomeSection.jsx";
-import AboutSection from "../components/about/AboutSection.jsx";
-import SkillsSection from "../components/skills/SkillsSection.jsx";
-import ProjectsSection from "../components/projects/ProjectsSection.jsx";
-import ContactSection from "../components/contact/ContactSection.jsx";
-import Header from "../components/common/Header.jsx";
-import Footer from "../components/common/Footer.jsx";
+import React, { FC } from "react";
+import WelcomeSection from "../components/welcome/WelcomeSection";
+import AboutSection from "@/components/about/AboutSection";
+import SkillsSection from "../components/skills/SkillsSection";
+import ProjectsSection from "../components/projects/ProjectsSection";
+import ContactSection from "../components/contact/ContactSection";
+import Header from "../components/common/Header";
+import Footer from "../components/common/Footer";
 
-export default function Home() {
+const Home: FC = () => {
   return (
     <main className="w-full flex flex-col items-center overflow-x-hidden">
       <Header />
@@ -22,4 +23,6 @@ export default function Home() {
       <Footer />
     </main>
   );
-}
+};
+
+export default Home;

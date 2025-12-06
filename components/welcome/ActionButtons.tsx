@@ -1,13 +1,13 @@
 "use client";
 
+import React, { FC } from "react";
 import Link from "next/link";
 
-export default function ActionButtons() {
+const ActionButtons: FC = () => {
   return (
     <div className="flex gap-6 mt-6">
       <Link
         href="/resume.pdf"
-        type="application/pdf"
         prefetch={false}
         id="btn1"
         className="px-8 md:px-12 py-3 md:py-4 rounded-2xl
@@ -19,7 +19,6 @@ export default function ActionButtons() {
         aria-label="Open resume (PDF) in a new tab"
         title="Open resume (PDF)"
       >
-        {" "}
         Resume (PDF)
       </Link>
 
@@ -37,4 +36,6 @@ export default function ActionButtons() {
       </Link>
     </div>
   );
-}
+};
+
+export default ActionButtons;

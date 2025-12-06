@@ -1,6 +1,7 @@
+import React, { FC } from "react";
 import Link from "next/link";
 
-export default function ContactSection() {
+const ContactSection: FC = () => {
   return (
     <section
       id="Contact"
@@ -62,4 +63,6 @@ export default function ContactSection() {
       </div>
     </section>
   );
-}
+};
+
+export default ContactSection;

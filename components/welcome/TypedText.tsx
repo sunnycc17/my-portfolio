@@ -1,11 +1,16 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import React, { FC, useEffect, useRef } from "react";
 import Typed from "typed.js";
 
-export default function TypedText({ strings = [] }) {
-  const el = useRef(null);
-  const cursorRef = useRef(null);
+interface TypedTextProps {
+  strings?: string[];
+}
+
+const TypedText: FC<TypedTextProps> = ({ strings = [] }) => {
+  // Correctly type refs as possibly null
+  const el = useRef<HTMLSpanElement | null>(null);
+  const cursorRef = useRef<HTMLSpanElement | null>(null);
 
   // longest string width pre-reserved
   const longest = strings.reduce((max, s) => Math.max(max, s.length), 0);
@@ -41,4 +46,6 @@ export default function TypedText({ strings = [] }) {
       </span>
     </span>
   );
-}
+};
+
+export default TypedText;

@@ -1,4 +1,20 @@
-export default function SkillsSection() {
+import React, { FC } from "react";
+
+interface SkillItemProps {
+  logo: string;
+  label: string;
+}
+
+const SkillItem: FC<SkillItemProps> = ({ logo, label }) => {
+  return (
+    <div className="flex items-center gap-4">
+      <img src={logo} alt={label} className="h-14 w-14" />
+      <span className="text-xl md:text-2xl font-semibold">{label}</span>
+    </div>
+  );
+};
+
+const SkillsSection: FC = () => {
   return (
     <section
       id="Skills"
@@ -25,17 +41,12 @@ export default function SkillsSection() {
             React is great for scaling projects and DRY with its components.
           </p>
           <p>
-            Next and Vercel are just amazing. They provide so many
-            <span className="font-medium highlight-primary">
-              {" "}
-              cool features
-            </span>{" "}
-            and <span className="font-medium highlight-primary">
-              insights
-            </span>{" "}
-            .
+            Next and Vercel are just amazing. They provide so many{" "}
+            <span className="font-medium highlight-primary">cool features</span>{" "}
+            and <span className="font-medium highlight-primary">insights</span>.
           </p>
         </div>
+
         {/* SKILLS */}
         <div className="w-full space-y-6 my-10">
           {/* FRONTEND */}
@@ -46,8 +57,8 @@ export default function SkillsSection() {
             <div className="grid grid-cols-[repeat(auto-fit,minmax(160px,1fr))] gap-10 pl-28 md:pl-36 pt-6">
               <SkillItem logo="html.svg" label="HTML" />
               <SkillItem logo="css.svg" label="CSS" />
-              <SkillItem logo="javascript.svg" label="Javascript" />
-              <SkillItem logo="typescript.svg" label="Typescript" />
+              <SkillItem logo="javascript.svg" label="JavaScript" />
+              <SkillItem logo="typescript.svg" label="TypeScript" />
               <SkillItem logo="tailwind.svg" label="Tailwind" />
               <SkillItem logo="react.svg" label="React" />
               <SkillItem logo="nextjs.svg" label="Next.js" />
@@ -83,20 +94,6 @@ export default function SkillsSection() {
       </div>
     </section>
   );
-}
+};
 
-function SkillItem({ logo, label }) {
-  return (
-    <div className="flex items-center gap-4">
-      <img
-        src={logo}
-        alt=""
-        aria-hidden="true"
-        className="h-14 w-14"
-      />
-      <span className="text-xl md:text-2xl font-semibold">
-        {label}
-      </span>
-    </div>
-  );
-}
+export default SkillsSection;

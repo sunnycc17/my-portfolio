@@ -1,16 +1,16 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import clsx from "clsx";
 import { Sling as Hamburger } from "hamburger-react";
 
-export default function Header() {
-  const [open, setOpen] = useState(false);
-  const [currentSection, setCurrentSection] = useState("");
+const navItems: string[] = ["Welcome", "About", "Skills", "Projects", "Contact"];
 
-  const navItems = ["Welcome", "About", "Skills", "Projects", "Contact"];
+const Header: React.FC = () => {
+  const [open, setOpen] = useState<boolean>(false);
+  const [currentSection, setCurrentSection] = useState<string>("");
 
-  const handleScroll = (id) => {
+  const handleScroll = (id: string) => {
     const el = document.getElementById(id);
     if (!el) return;
 
@@ -25,9 +25,7 @@ export default function Header() {
 
       const current = navItems.find((id) => {
         const el = document.getElementById(id);
-        return (
-          el && el.offsetTop <= pos && pos < el.offsetTop + el.offsetHeight
-        );
+        return el ? el.offsetTop <= pos && pos < el.offsetTop + el.offsetHeight : false;
       });
 
       setCurrentSection(current || "");
@@ -132,4 +130,6 @@ export default function Header() {
       </div>
     </header>
   );
-}
+};
+
+export default Header;
