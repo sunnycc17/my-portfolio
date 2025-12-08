@@ -8,7 +8,7 @@ interface SkillItemProps {
 const SkillItem: FC<SkillItemProps> = ({ logo, label }) => {
   return (
     <div className="flex items-center gap-4">
-      <img src={logo} alt={label} className="h-14 w-14" />
+      <img src={logo} alt="" aria-hidden="true" className="h-14 w-14" />
       <span className="text-xl md:text-2xl font-semibold">{label}</span>
     </div>
   );

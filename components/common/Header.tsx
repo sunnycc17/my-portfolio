@@ -82,7 +82,7 @@ const Header: React.FC = () => {
       {/* Overlay */}
       <div
         className={clsx(
-          "fixed inset-0 bg-black bg-opacity-50 z-20 transition-opacity duration-500",
+          "fixed inset-0 bg-black/40 z-20 transition-opacity duration-500 lg:hidden",
           open
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
@@ -93,7 +93,7 @@ const Header: React.FC = () => {
       {/* Mobile sidebar sliding from right */}
       <div
         className={clsx(
-          "lg:hidden fixed top-0 right-0 h-full z-30 w-64 overflow-hidden px-6 py-6 sm:max-w-sm bg-[#1A1A1A] shadow-lg transition-transform duration-500 ease-in-out",
+          "lg:hidden fixed top-0 right-0 h-full z-30 w-64 overflow-hidden px-6 py-6 sm:max-w-sm sidebar shadow-lg transition-transform duration-500 ease-in-out",
           open ? "translate-x-0" : "translate-x-full"
         )}
       >

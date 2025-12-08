@@ -83,7 +83,8 @@ const ProjectsSection: FC = () => {
           >
             <Image
               src={project.image}
-              alt={project.title}
+              alt=""
+              aria-hidden="true"
               width={project.width}
               height={project.height}
               className="w-full h-auto object-cover transition-opacity duration-200 group-hover:opacity-70 rounded-lg"
