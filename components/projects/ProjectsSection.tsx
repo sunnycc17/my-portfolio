@@ -15,12 +15,12 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Fitness Trainer SPA",
-    description: "• HTML • Tailwind • CSS",
-    image: "/project.webp",
+    title: "Piano Lessons",
+    description: "• NextJs • Tailwind • CSS • React • Vercel",
+    image: "/cooli.webp",
     width: 800,
     height: 450,
-    link: "https://sunnycc17.github.io/arne-drinovec-coaching/#home",
+    link: "https://cooli-eight.vercel.app/",
   },
   {
     title: "Botany Book",

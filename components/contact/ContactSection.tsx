@@ -36,6 +36,17 @@ const ContactSection: FC = () => {
           </Link>
 
           <Link
+            href="https://discord.com/users/678275424790249472"
+            target="_blank"
+            className="flex items-center gap-2 text-2xl font-bold text-orange-400 group"
+          >
+            <span className="transform transition-all group-hover:translate-x-2">
+              →
+            </span>
+            Discord
+          </Link>
+
+          <Link
             href="https://github.com/sunnycc17"
             target="_blank"
             className="flex items-center gap-2 text-2xl font-bold text-orange-400 group"
