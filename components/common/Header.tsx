@@ -4,7 +4,13 @@ import React, { useState, useEffect } from "react";
 import clsx from "clsx";
 import { Sling as Hamburger } from "hamburger-react";
 
-const navItems: string[] = ["Welcome", "About", "Skills", "Projects", "Contact"];
+const navItems: string[] = [
+  "Welcome",
+  "About",
+  "Skills",
+  "Projects",
+  "Contact",
+];
 
 const Header: React.FC = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -25,7 +31,9 @@ const Header: React.FC = () => {
 
       const current = navItems.find((id) => {
         const el = document.getElementById(id);
-        return el ? el.offsetTop <= pos && pos < el.offsetTop + el.offsetHeight : false;
+        return el
+          ? el.offsetTop <= pos && pos < el.offsetTop + el.offsetHeight
+          : false;
       });
 
       setCurrentSection(current || "");
@@ -41,7 +49,7 @@ const Header: React.FC = () => {
 
   return (
     <header className="fixed top-0 z-30 w-full">
-      <div className="backdrop-blur-sm">
+      <div className="backdrop-blur-none lg:backdrop-blur-sm">
         <nav className="mx-auto flex max-w-7xl items-center justify-center p-6 sm:p-4 relative">
           {/* Mobile toggle (navbar) */}
           <div className={`lg:hidden ${hamburgerPosition}`}>
