@@ -36,7 +36,7 @@ const ContactSection: FC = () => {
           </Link>
 
           <Link
-            href="https://discord.com/users/678275424790249472"
+            href="https://discord.gg/b5EYmhqn"
             target="_blank"
             className="flex items-center gap-2 text-2xl font-bold text-orange-400 group"
           >
