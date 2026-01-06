@@ -59,13 +59,16 @@ const ProjectsSection: FC = () => {
       <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 mb-4 highlight-secondary">
         These sites showcase design and experience with clients.
       </h3>
+
       <div className="text-xl md:text-2xl leading-relaxed space-y-2 mb-12">
-        <p>I always search for new ideas to implement and seek feedback.</p>
         <p>
-          These projects showcase{" "}
+          I actively experiment with new ideas and implement based on feedback.
+        </p>
+        <p>
+          They are built with{" "}
           <span className="highlight-primary">reusable </span>components and{" "}
-          <span className="highlight-primary">scalable </span> front-end
-          architecture.
+          <span className="highlight-primary">scalable </span>
+          front-end architecture.
         </p>
       </div>
 
