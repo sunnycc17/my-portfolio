@@ -62,9 +62,10 @@ const ProjectsSection: FC = () => {
       <div className="text-xl md:text-2xl leading-relaxed space-y-2 mb-12">
         <p>I always search for new ideas to implement and seek feedback.</p>
         <p>
-          Each build reflects{" "}
-          <span className="highlight-primary">progression</span> and{" "}
-          <span className="highlight-primary">deliberate</span> design.
+          These projects showcase{" "}
+          <span className="highlight-primary">reusable </span>components and{" "}
+          <span className="highlight-primary">scalable </span> front-end
+          architecture.
         </p>
       </div>
 
