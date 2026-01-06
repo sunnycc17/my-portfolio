@@ -31,12 +31,12 @@ const projects: Project[] = [
     link: "https://sunnycc17.github.io/Magical-Botany-Guide/",
   },
   {
-    title: "Sunny Delights",
-    description: "• React • TypeScript • Algolia API",
-    image: "/sunny-delight.webp",
+    title: "Bodybuilding Coach",
+    description: "• NextJs • Tailwind • React • TypeScript • Vercel",
+    image: "/arne.webp",
     width: 800,
     height: 450,
-    link: "https://sunnycc17.github.io/E-commerce-site/",
+    link: "https://arne-kappa.vercel.app/",
   },
 ];
 
