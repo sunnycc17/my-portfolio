@@ -20,7 +20,7 @@ const projects: Project[] = [
     image: "/cooli.webp",
     width: 800,
     height: 450,
-    link: "https://cooli-eight.vercel.app/",
+    link: "https://www.shawpiano.com/",
   },
   {
     title: "Botany Book",
