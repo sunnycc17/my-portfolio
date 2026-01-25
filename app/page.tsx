@@ -18,9 +18,8 @@ const Home: FC = () => {
         <SkillsSection />
         <ProjectsSection />
         <ContactSection />
+        <Footer />
       </div>
-
-      <Footer />
     </main>
   );
 };
