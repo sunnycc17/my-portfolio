@@ -9,7 +9,7 @@ const CreditsSection: FC = () => {
       className="relative flex w-full flex-col md:flex-row items-center justify-between overflow-x-hidden min-h-dvh py-24"
     >
       {/* LEFT — TEXT */}
-      <div className="relative z-10 flex-1 flex flex-col items-start justify-start space-y-6 md:pr-12 text-left max-w-4xl px-14 md:px-20">
+      <div className="relative z-10 flex-1 flex flex-col items-start justify-start space-y-6 md:pr-12 text-left max-w-4xl px-4 md:px-20">
         <h2 className="text-3xl font-semibold sm:text-4xl lg:text-5xl relative mb-4">
           <span className="relative inline-block ml-4">
             <span className="absolute -left-5 top-1/2 -translate-y-1/2 h-12 w-1 border-colour" />
@@ -62,9 +62,9 @@ const CreditsSection: FC = () => {
 
       {/* RIGHT — IMAGE + CAPTION */}
       <div className="flex-1 flex flex-col items-center justify-center mt-16 md:mt-0 px-10">
-        <div className="relative w-72 h-72 md:w-80 md:h-96 rounded-2xl overflow-hidden shadow-lg">
+        <div className="relative w-72 h-96 md:w-80 md:h-96 rounded-2xl overflow-hidden shadow-lg">
           <Image
-            src="/toast.webp"   // replace with your image
+            src="/toast.webp"  
             alt="Credits illustration"
             fill
             className="object-cover"
