@@ -27,13 +27,19 @@ This is how I approach my work: build something solid, prove it works, then refi
 
     `,
   },
-  "learning-by-breaking": {
-    title: "Learning by Breaking",
+  "Arch-Linux": {
+    title: "Arch Linux",
     date: "2026-01-10",
     content: `
-Most learning happens when something fails.
+Most learning happens when something fails. If nothing breaks, nothing evolves.
 
-If nothing breaks, nothing evolves.
+My journey with Linux started about a year ago. I first tried Mint, very user friendly, almost identical to Windows, but lighter, faster, and better. I was using a broken €200 laptop with a Celeron processor, so I wanted to go as lightweight as possible. That’s when I tried barebones Arch.
+
+Back then, I didn’t want to read documentation or watch video tutorials, so unsurprisingly, I struggled a lot, and for no good reason. I also used ChatGPT for help, which somehow made things worse. I spent days just trying to connect to the internet. iwctl kept failing, and ChatGPT convinced me I needed to mess with IPv6 or DHCP (if I remember correctly).
+
+Eventually, I plugged in my phone via USB, tethered the connection, downloaded NetworkManager, and everything worked perfectly. Wi-Fi connected instantly.
+
+The lesson: if you want to use Arch, just run archinstall. Pick local mirrors, partition the disk, set a password, and you’re done. Do not try to do everything manually for the love of god.
     `,
   },
 };
@@ -52,7 +58,9 @@ export default async function BlogPost({
   return (
     <article className="min-h-dvh py-32 px-4 md:px-6 max-w-4xl mx-auto">
       <header>
-        <h1 className="text-3xl md:text-4xl font-bold mb-4 highlight-secondary">{post.title}</h1>
+        <h1 className="text-3xl md:text-4xl font-bold mb-4 highlight-secondary">
+          {post.title}
+        </h1>
 
         <time dateTime={post.date} className="text-sm opacity-80 mb-10 block">
           {post.date}

@@ -8,9 +8,9 @@ const posts = [
     date: "2026-01-20",
   },
   {
-    slug: "learning-by-breaking",
-    title: "Learning by Breaking",
-    excerpt: "Most progress comes from controlled failure.",
+    slug: "Arch-Linux",
+    title: "Arch Linux",
+    excerpt: "The hardest linux distro, allegedly.",
     date: "2026-01-10",
   },
 ];
