@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Link from "next/link";
 
 type Post = {
   title: string;
@@ -21,9 +22,7 @@ One example that matters to me is a project I built for my client Andrew. Shortl
 
 That project isn’t finished. My next goal is to improve its visibility and long-term performance. I’m now working on strengthening the site’s SEO so it can consistently attract the right traffic. That means diving into Google Search Console and other SEO tools, identifying weak points, improving structure, and expanding the site with useful, relevant content.
 
-I’ll be adding blog posts and on-page content designed to answer real questions, provide value, and build authority over time. The goal isn’t just to rank higher—it’s to earn that position by being genuinely useful.
-
-This is how I approach my work: build something solid, prove it works, then refine and scale it. Every project is a system that can be improved, and helping people get real results through what I build is the part I care about most.
+This is how I approach my work: build something solid, prove it works, then refine and scale it. Every project is a system that can be improved, and helping people get real results through what I build is the part I care about the most.
 
 
     `,
@@ -42,7 +41,7 @@ If nothing breaks, nothing evolves.
 export default async function BlogPost({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: { slug: string };
 }) {
   const { slug } = await params;
 
@@ -52,9 +51,13 @@ export default async function BlogPost({
 
   return (
     <article className="min-h-dvh py-32 px-4 md:px-6 max-w-4xl mx-auto">
-      <h1 className="text-3xl md:text-4xl font-bold mb-4">{post.title}</h1>
+      <header>
+        <h1 className="text-3xl md:text-4xl font-bold mb-4 highlight-secondary">{post.title}</h1>
 
-      <p className="text-sm opacity-50 mb-10">{post.date}</p>
+        <time dateTime={post.date} className="text-sm opacity-80 mb-10 block">
+          {post.date}
+        </time>
+      </header>
 
       <div className="prose prose-invert max-w-none text-lg leading-relaxed">
         {post.content
@@ -64,6 +67,17 @@ export default async function BlogPost({
             <p key={i}>{paragraph}</p>
           ))}
       </div>
+      <nav aria-label="Breadcrumb">
+        <Link
+          href="/blog"
+          className="flex items-center gap-2 pt-8 text-xl font-bold text-orange-400 group"
+        >
+          <span className="transform transition-all group-hover:translate-x-2">
+            →
+          </span>
+          Back to the Blog
+        </Link>
+      </nav>
     </article>
   );
 }
