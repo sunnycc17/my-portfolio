@@ -12,7 +12,7 @@ const posts: Record<string, Post> = {
     title: "Why I Build Things",
     date: "2026-01-20",
     content: `
-I like creating things that are useful, things that help people move forward in life.
+I like creating things that are useful, that help people move forward in life.
 
 Most of my work focuses on landing pages and portfolios. Creating aesthetic, clear and cohesive designs. A well-built page gives people a place to show what they can do, tell their story and connect with the right audience or clients. 
 
@@ -33,7 +33,7 @@ This is how I approach my work: build something solid, prove it works, then refi
     content: `
 Most learning happens when something fails. If nothing breaks, nothing evolves.
 
-My journey with Linux started about a year ago. I first tried Mint, very user friendly, almost identical to Windows, but lighter, faster, and better. I was using a broken €200 laptop with a Celeron processor, so I wanted to go as lightweight as possible. That’s when I tried barebones Arch.
+My journey with Linux started about a year ago. I first tried Mint, very user friendly, almost identical to Windows, but lighter, faster, and better. I was using a broken €200 laptop with a Celeron processor, so I wanted to go as lightweight as possible. That’s when I tried Arch.
 
 Back then, I didn’t want to read documentation or watch video tutorials, so unsurprisingly, I struggled a lot, and for no good reason. I also used ChatGPT for help, which somehow made things worse. I spent days just trying to connect to the internet. iwctl kept failing, and ChatGPT convinced me I needed to mess with IPv6 or DHCP (if I remember correctly).
 
@@ -67,7 +67,7 @@ export default async function BlogPost({
         </time>
       </header>
 
-      <div className="prose prose-invert max-w-none text-lg leading-relaxed">
+      <div className="prose prose-invert max-w-none text-lg lg:text-xl leading-relaxed">
         {post.content
           .trim()
           .split(/\n\s*\n/)
