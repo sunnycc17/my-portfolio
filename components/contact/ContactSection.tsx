@@ -58,7 +58,7 @@ const ContactSection: FC = () => {
           </Link>
 
           <Link
-            href="mailto:vogkristina@gmail.com"
+            href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#118;&#111;&#103;&#107;&#114;&#105;&#115;&#116;&#105;&#110;&#97;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;"
             className="flex items-center gap-2 text-2xl font-bold text-orange-400 group"
           >
             <span className="transform transition-all group-hover:translate-x-2">
