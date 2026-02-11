@@ -13,12 +13,20 @@ const posts = [
     excerpt: "The hardest linux distro, allegedly.",
     date: "2026-01-10",
   },
+  {
+    slug: "Cybersecurity",
+    title: "Cybersecurity",
+    excerpt: "Try Hack Me and Hack The Box.",
+    date: "2026-02-11",
+  },
 ];
 
 export default function BlogPage() {
   return (
     <section className="min-h-dvh py-32 px-4 md:px-6 max-w-4xl mx-auto">
-      <h1 className="text-4xl md:text-5xl font-bold mb-12 highlight-secondary">Blog</h1>
+      <h1 className="text-4xl md:text-5xl font-bold mb-12 highlight-secondary">
+        Blog
+      </h1>
 
       <div className="flex flex-col space-y-10">
         {posts.map((post) => (

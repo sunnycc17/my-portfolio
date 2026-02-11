@@ -16,7 +16,7 @@ interface Project {
 const projects: Project[] = [
   {
     title: "Piano Lessons",
-    description: "• NextJs • Tailwind • CSS • React • Vercel",
+    description: "• NextJs • Tailwind • CSS • React • Cloudfare",
     image: "/cooli.webp",
     width: 800,
     height: 450,
