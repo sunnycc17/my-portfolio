@@ -23,12 +23,12 @@ const projects: Project[] = [
     link: "https://www.shawpiano.com/",
   },
   {
-    title: "Botany Book (Migrating to Next)",
-    description: "• React • TypeScript • Custom API(disabled)",
-    image: "/project-moon.webp",
+    title: "Botany Book",
+    description: "• React • Next • TypeScript • Vercel • Tailwind",
+    image: "/botany.webp",
     width: 800,
     height: 450,
-    link: "https://sunnycc17.github.io/Magical-Botany-Guide/",
+    link: "https://botany.vercel.app/",
   },
   {
     title: "Bodybuilding Coach (under constraction)",
