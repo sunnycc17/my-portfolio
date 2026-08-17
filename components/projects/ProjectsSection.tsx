@@ -38,6 +38,14 @@ const projects: Project[] = [
     height: 450,
     link: "https://arne-kappa.vercel.app/",
   },
+  {
+    title: "Umami Kranj",
+    description: "• NextJs • Tailwind • React • TypeScript • Vercel",
+    image: "/umami.webp",
+    width: 800,
+    height: 450,
+    link: "https://desserts-catering.vercel.app/",
+  },
 ];
 
 const breakpointColumnsObj = {
